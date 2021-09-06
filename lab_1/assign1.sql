@@ -16,7 +16,6 @@ INSERT INTO Student VALUES ('kane',11,22,86,95,52,57,73);
 
 INSERT INTO Student VALUES ('tom',50,21,76,84,62,74,81);
 
-SELECT * FROM Student;
 
 /*creating table two Campus*/
 
@@ -28,7 +27,6 @@ INSERT INTO Campus VALUES('muc',104,'mad',2000,0,1,1);
 
 INSERT INTO Campus VALUES('mgt',107,'bom',1500,1,0,1);
 
-SELECT * FROM Campus;
 
 /*1. Management wants to know the cid of colleges in the uni that can support law.*/
   SELECT * FROM Campus WHERE law=1;
