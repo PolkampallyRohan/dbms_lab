@@ -16,8 +16,6 @@ INSERT INTO Student VALUES ('kane',11,22,86,95,52,57,73);
 
 INSERT INTO Student VALUES ('tom',50,21,76,84,62,74,81);
 
-SELECT * FROM Student;
-
 /*creating table two Campus*/
 
 CREATE TABLE Campus(name varchar(20),cid int,loc varchar(20),cap int,law bool,engg bool,buss bool);
@@ -28,7 +26,6 @@ INSERT INTO Campus VALUES('muc',104,'mad',2000,0,1,1);
 
 INSERT INTO Campus VALUES('mgt',107,'bom',1500,1,0,1);
 
-SELECT * FROM Campus;
 
 /* 11. Class teacher wants to find the student name and rollno with the maximum avg in all subjects.*/
 SELECT name,rollno FROM student WHERE (sci+math+eng+social+sports)/5=(SELECT max((sci+math+eng+social+sports)/5) FROM student);
