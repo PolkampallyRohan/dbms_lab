@@ -53,7 +53,7 @@ SELECT loc FROM campus WHERE engg=0;
 
 /*8. What is the ratio of students in the campus that provides stem and does not provide stem (query and show
   ratio by calc yourself, no need to divide just num/denom)*/
-SELECT (SELECT count(cap) FROM campus WHERE engg=1)/(WHERE count(cap) FROM campus WHERE engg=0);
+SELECT (SELECT count(cap) FROM campus WHERE engg=1)/(SELECT count(cap) FROM campus WHERE engg=0);
 
 /*9. For all rounder find students who have score above 70 in all subj.*/
 SELECT * FROM Student WHERE math>70 AND sci>70 AND eng>70 AND social>70 AND sports>70;
