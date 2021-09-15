@@ -22,7 +22,7 @@
 /* 5.This year the college has decided to not only award the student who came first in the college(from any batch/joining yrs) but also the student who has come second.
      Find the student who has the second highest avg in the table.(sub queries, aggregation, comparison, logical) */
      
-     select name as StudentWith_SecondHighestAverage,max((math+sci+eng+social+sports)/5) as Average from student where  (math+sci+eng+social+sports)/5 < (select max((math+sci+eng+social+sports)/5) from student);
+     select name as StudentWith_SecondHighestAverage,max((math+sci+eng+social+sports)/5) as Average from student where  (math+sci+eng+social+sports)/5=(select max((math+sci+eng+social+sports)/5) from student where (math+sci+eng+social+sports)/5 != (select max((math+sci+eng+social+sports)/5) from student));
 
 /* 6.Display student’s name, rno, avg marks (“avg_marks”), score status (“score_status”) where score status is “High” if above average and “Low” if below average.
      (sub queries) */
