@@ -26,3 +26,11 @@
      (sub queries) */
      
      select name,rollno as rno,(math+sci+eng+social+sports)/5 as avg_marks,case when (math+sci+eng+social+sports)/5 > (select sum((math+sci+eng+social+sports)/5)/11 from student) then 'HIGH' when (math+sci+eng+social+sports)/5 < (select sum((math+sci+eng+social+sports)/5)/11 from student) then 'LOW' end as score_status from student;       
+
+
+
+
+
+
+
+
