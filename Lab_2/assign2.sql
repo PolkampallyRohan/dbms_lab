@@ -1,3 +1,5 @@
+/* Querries */
+
 /* 1.Suppose we are having a vaccination drive and someone suggests we give the vaccines as per age.We want to vaccinate the eldest student first and youngest last with nobody
      under 18( as there might be people under 18). Make a list containing name, rno and age in descending order of age. (sub query, alias, aggregation) */
  
