@@ -25,6 +25,8 @@ class Mysqlhandler:
     def display_users(self,value):
         query=("select * from user_data where name='{}'".format(value))
         cursor.execute(query)
+        result = cursor.fetchall()
+        print(result)
 
 def main():
     obj=  Mysqlhandler()
