@@ -29,12 +29,12 @@ class Mysqlhandler:
         print(result)
 
 def main():
-    obj=  Mysqlhandler()
-    obj.add_user('dwayne',3426,'1910-01-19')
-    obj.add_user('adolf',7868,'2199-09-24')
-    obj.update_user('adolf','2319-07-30',7868)
-    obj.delete_user('adolf')
-    obj.display_users('dwayne')
+  #  obj=  Mysqlhandler()
+  #  obj.add_user('dwayne',3426,'1910-01-19')
+  #  obj.add_user('adolf',7868,'2199-09-24')
+  #  obj.update_user('adolf','2319-07-30',7868)
+  #  obj.delete_user('adolf')
+  #  obj.display_users('dwayne')
 
 if __name__=="__main__":
     main()
