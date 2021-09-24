@@ -1,4 +1,5 @@
 import mysql.connector
+import json
 cnx = mysql.connector.connect(user="root", passwd="pwd", db="UserDB")
 
 #inplace of "pwd" please use your appropriate password
@@ -25,8 +26,14 @@ class Mysqlhandler:
     def display_users(self,value):
         query=("select * from user_data where name='{}'".format(value))
         cursor.execute(query)
-        result = cursor.fetchall()
-        print(result)
+        name,phno,dob=list(cursor)[0]
+        DOB=dob.strftime("%Y-%m-%d")
+        obj={
+            'name':name,
+            'phno':phno,
+            'dob':DOB
+        }
+        return(json.dumps(obj))
 
 def main():
    handler=  Mysqlhandler()
