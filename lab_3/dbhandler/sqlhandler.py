@@ -1,6 +1,8 @@
 import mysql.connector
 db = mysql.connector.connect(user="root", passwd="pwd", db="UserDB")
 
+#inplace of "pwd" please use your appropriate password
+
 cursor = db.cursor()
 
 class Mysqlhandler:
@@ -20,15 +22,17 @@ class Mysqlhandler:
         cursor.execute(query)
         db.commit()
        
-    def display_user(self,value):
+    def display_users(self,value):
         query=("select * from user_data where name='{}'".format(value))
         cursor.execute(query)
 
 def main():
     obj=  Mysqlhandler()
-    obj.add_user('dwaygggg',3426,'1910-01-19')
-    obj.add_user('adfjhjhjh',7868,'2199-09-24')
-    obj.update_user('adfjhjhjh','2319-07-30',7868)
+    obj.add_user('dwayne',3426,'1910-01-19')
+    obj.add_user('adolf',7868,'2199-09-24')
+    obj.update_user('adolf','2319-07-30',7868)
+    obj.delete_user('adolf')
+    obj.display_users('dwayne')
 
 if __name__=="__main__":
     main()
