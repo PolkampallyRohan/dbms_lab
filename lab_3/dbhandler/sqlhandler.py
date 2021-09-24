@@ -24,10 +24,18 @@ class Mysqlhandler:
         query=("select * from user_data where name='{}'".format(value))
         cursor.execute(query)
 
-#obj1=  Mysqlhandler()
+def main():
+    obj=  Mysqlhandler()
+    obj.add_user('dwaygggg',3426,'1910-01-19')
+    obj.add_user('adfjhjhjh',7868,'2199-09-24')
+    obj.update_user('adfjhjhjh','2319-07-30',7868)
 
-#obj1.add_user('dwaygggg',3426,'1910-01-19')
-#obj1.update_user('adfjhjhjh','2319-07-30',7868)
-# #obj1.delete_user('dway')
+if __name__=="__main__":
+    main()
 
-# #obj1.display_user('dway')
+
+
+
+
+
+
