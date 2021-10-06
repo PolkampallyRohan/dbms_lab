@@ -14,11 +14,7 @@
 
 /* 4. Display data in the following format using Group By and Order By */
 
-      (select name,rollno,dob,yjoin,gender,team,math,sci,eng,social,sports from student order by field(team,'A','G','R','W') ,sports asc limit 2) union 
-      (select name,rollno,dob,yjoin,gender,team,math,sci,eng,social,sports from student order by field(team,'G','R','W','A') ,rollno  limit 2) union 
-      (select name,rollno,dob,yjoin,gender,team,math,sci,eng,social,sports from student order by field(team,'R','W','A','G') ,sports asc limit 2) union 
-      (select name,rollno,dob,yjoin,gender,team,math,sci,eng,social,sports from student order by field(team,'W','A','G','R'), math limit 1) union 
-      (select name,rollno,dob,yjoin,gender,team,math,sci,eng,social,sports from student order by field(team,'W','A','G','R') ,sci desc limit 2);
+      select * from students group by gender,team order by team;
 
 /* 5. Use the group by followed by order by followed by limit to show ‘team’ and ‘avg(sci)’ columns of the top two teams with highest average in science. */
 
