@@ -42,3 +42,27 @@
       b. Add fk to rollno to sem1 rollno
       c. Add cid
       d. Add fk to cid to campus cid */
+      
+   alter table student drop column math, drop column sci, drop column eng, drop column social, drop column sports;
+   alter table student add foreign key (rollno) references marks_sem1(rollno);
+   alter table student add cid int;    
+   update student set cid = 109 where name = 'dwayne';
+update student set cid = 101 where name = 'john';
+update student set cid = 110 where name = 'dave';
+update student set cid = 104 where name = 'randy';
+update student set cid = 104 where name = 'kane';
+update student set cid = 101 where name = 'tom';
+update student set cid = 113 where name = 'carol';
+update student set cid = 107 where name = 'wanda';
+update student set cid = 109 where name = 'natasha';
+update student set cid = 109 where name = 'gamora';
+update student set cid = 110 where name = 'jean';
+alter table student alter dob set default '2001-01-01 ';
+alter table student alter yjoin set default 2019;
+alter table student alter team set default 'R';
+alter table student alter gender set default 'M';
+alter table student add foreign key (cid) references campus(cid);
+select * from student;
+describe student;
+      
+      
