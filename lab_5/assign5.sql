@@ -1,6 +1,6 @@
 /* Querries */
 
-/* 1. Design a table marsk_sem1.
+/* 1. Design a table marks_sem1.
       a. It must contain all marks as seen in the student table.
       b. One way to go about this is to create a copy of the student table and drop columns.
       c. Make roll number the primary key */
@@ -36,6 +36,7 @@
       a. Make cid primary key */
       
    alter table campus add primary key (cid);
+   describe campus;
       
 /* 5. Update student table
       a. Drop not required columns (as shown below)
@@ -47,22 +48,30 @@
    alter table student add foreign key (rollno) references marks_sem1(rollno);
    alter table student add cid int;    
    update student set cid = 109 where name = 'dwayne';
-update student set cid = 101 where name = 'john';
-update student set cid = 110 where name = 'dave';
-update student set cid = 104 where name = 'randy';
-update student set cid = 104 where name = 'kane';
-update student set cid = 101 where name = 'tom';
-update student set cid = 113 where name = 'carol';
-update student set cid = 107 where name = 'wanda';
-update student set cid = 109 where name = 'natasha';
-update student set cid = 109 where name = 'gamora';
-update student set cid = 110 where name = 'jean';
-alter table student alter dob set default '2001-01-01 ';
-alter table student alter yjoin set default 2019;
-alter table student alter team set default 'R';
-alter table student alter gender set default 'M';
-alter table student add foreign key (cid) references campus(cid);
-select * from student;
-describe student;
+   update student set cid = 101 where name = 'john';
+   update student set cid = 110 where name = 'dave';
+   update student set cid = 104 where name = 'randy';
+   update student set cid = 104 where name = 'kane';
+   update student set cid = 101 where name = 'tom';
+   update student set cid = 113 where name = 'carol';
+   update student set cid = 107 where name = 'wanda';
+   update student set cid = 109 where name = 'natasha';
+   update student set cid = 109 where name = 'gamora';
+   update student set cid = 110 where name = 'jean';
+   alter table student alter dob set default '2001-01-01 ';
+   alter table student alter yjoin set default 2019;
+   alter table student alter team set default 'R';
+   alter table student alter gender set default 'M';
+   alter table student add foreign key (cid) references campus(cid);
+   select * from student;
+   describe student;
+      
+      
+      
+      
+      
+      
+      
+      
       
       
